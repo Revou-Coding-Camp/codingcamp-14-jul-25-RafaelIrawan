@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Revou Project</title>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo"><img src="assets/Rafael.JPG" alt=""></div>
+                <ul class="nav-links">
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#" >Our Profile</a></li>
+                    <li><a href="#" >Portfolio</a></li>
+                    <li><a href="#" >Message Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <!-- Home Page -->
+            <section id="home" class="page-section active">
+                <div class="hero">
+                    <h1>Hi <span id="anony">Anonymous</span>, Welcome To My Website</h1>
+                    <img src="assets/conan.jpg" class="conan-img" alt="">
+                </div>
+
+                <div class="section">
+                    <h2>My Current Skills</h2>
+                    <div class="skills">
+                        <div class="hq-item">
+                            <div class="hq-circle"><img src="assets/html.png" alt=""></div>
+                            <h3>HTML</h3>
+                        </div>
+                        <div class="hq-item">
+                            <div class="hq-circle"><img src="assets/css.png" alt=""></div>
+                            <h3>CSS</h3>
+                        </div>
+                        <div class="hq-item">
+                            <div class="hq-circle"><img src="assets/js.png" alt=""></div>
+                            <h3>Javascript</h3>
+                        </div>
+                        <div class="hq-item">
+                            <div class="hq-circle"><img src="assets/java.png" alt=""></div>
+                            <h3>Java</h3>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2>Message Me</h2>
+                    <div class="form-container">
+                        <div class="form-section" id="formid">
+                            <form id="messageForm">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="name">Name</label>
+                                        <input type="text" id="name" name="name"  onsubmit="validate_name()">
+                                        <div class="error" id="nameError"></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="birthDate">Tanggal Lahir</label>
+                                        <input type="date" id="birthDate" name="birthDate"  onsubmit="validate_date()">
+                                        <div class="error" id="birthDateError"></div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Jenis Kelamin</label>
+                                    <div class="radio-group">
+                                        <label><input type="radio" name="gender" value="Laki-Laki"  onsubmit="validate_gender()"> Laki-Laki</label>
+                                        <label><input type="radio" name="gender" value="Perempuan"  onsubmit="validate_gender()"> Perempuan</label>
+                                    </div>
+                                    <div class="error" id="genderError"></div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="message">Pesan</label>
+                                    <textarea id="message" name="message" placeholder="Pesan"  onsubmit="validate_message()"></textarea>
+                                    <div class="error" id="messageError"></div>
+                                </div>
+
+                                <button type="submit" class="submit-btn">Submit</button>
+                            </form>
+                        </div>
+
+                        <div class="info-section">
+                            <div class="contact-info">
+                                <h2>Message Info</h2>
+                                <br>
+                                <p><strong>Name:</strong> <span id="displayName"></span></p>
+                                <p><strong>Tanggal Lahir:</strong> <span id="displayBirthDate"></span></p>
+                                <p><strong>Jenis Kelamin:</strong> <span id="displayGender"></span></p>
+                                <p><strong>Pesan:</strong> <span id="displayMessage"></span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+           
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Created By Rafael Irawan</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
